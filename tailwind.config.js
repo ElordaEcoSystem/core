@@ -7,9 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // boxShadow: {
-      //   "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.1)",
-      // },
+      boxShadow: {
+        main: "35px 19px 49px -30px rgba(0, 42, 81, 0.2)",
+      },
       colors: {
         prime: "#002A51",
         secondary: "#E6EAEE",

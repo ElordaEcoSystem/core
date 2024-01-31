@@ -10,7 +10,7 @@ export const Perform = () => {
   return (
     <section id="perform" className="py-10">
       <div className="container ">
-        <div className="text-prime text-4xl font-bold">Наши показатели</div>
+        <div className="text-def_black text-4xl font-bold">Наши показатели</div>
         <div className="mt-14 flex gap-6">
           {PERFORM_YEAR_BUTTONS.map((year) => (
             <button
@@ -45,15 +45,17 @@ export const Perform = () => {
 
 const PerfromItem = ({ title, icon, number, unit, activeYear }) => {
   return (
-    <div className="pb-6 pt-2 px-3 border-2 border-prime bg-white transition-all w-44 hover:scale-105 hover:drop-shadow-xl hover:shadow-prime">
+    <div className="pb-6 pt-2 px-3 border-2 border-prime bg-white transition-all w-[168px] hover:scale-105 hover:shadow-main shadow-prime">
       <div className="flex items-center justify-center">
         <PerformIcon key={icon} icon={icon} className="w-12" />
       </div>
-      <div className="mt-3 text-prime text-center text-2xl font-semibold">
+      <div className="mt-3 text-prime text-center text-xl font-semibold">
         {number[activeYear]}
       </div>
-      <div className="text-prime text-center text-lg font-semibold">{unit}</div>
-      <div className="mt-3 text-def_black text-center text-base font-normal leading-tight">
+      <div className="text-prime text-center text-base font-semibold">
+        {unit}
+      </div>
+      <div className="mt-3 text-def_black text-center text-sm font-normal leading-tight">
         {title}
       </div>
     </div>

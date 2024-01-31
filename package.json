@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.5",
+    "clsx": "^2.0.0",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "swiper": "^11.0.5",
     "ymaps": "^0.2.1"
   },
   "devDependencies": {
