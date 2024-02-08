@@ -9,13 +9,11 @@ import { Perform } from "@/components/Perform";
 export default function Home() {
   return (
     <div className=" ">
-      <Header />
       <main className="">
         <Banner />
         <Perform />
         <News />
       </main>
-      <Footer />
     </div>
   );
 }

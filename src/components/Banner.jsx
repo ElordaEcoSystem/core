@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export const Banner = () => {
   return (
     <section id="banner" className="bg-prime">
@@ -15,22 +16,28 @@ export const Banner = () => {
             пригородных населенных пунктах.
           </div>
           <div className=" mt-10 flex gap-4">
-            <button className="px-5 py-1 bg-white rounded-sm text-prime font-semibold text-sm hover:scale-105 transition-all duration-300">
+            <Link
+              href={"/about"}
+              className="px-5 py-1 bg-white rounded-sm text-prime font-semibold text-sm hover:scale-105 transition-all duration-300"
+            >
               Об организаций
-            </button>
-            <button className="px-5 py-1 bg-white rounded-sm text-prime font-semibold text-sm hover:scale-105 transition-all duration-300">
+            </Link>
+            <Link
+              href="/press_center"
+              className="px-5 py-1 bg-white rounded-sm text-prime font-semibold text-sm hover:scale-105 transition-all duration-300"
+            >
               Пресс центр
-            </button>
+            </Link>
           </div>
         </div>
-        <div className="">
-          {/* <Image
-            src="/image/bg-main.png"
+        <div className="py-40">
+          <Image
+            src="/image/Ресурс 1 белый.png"
             width={0}
             height={0}
             sizes="100vw"
             className="h-full w-full object-cover"
-          /> */}
+          />
         </div>
       </div>
     </section>

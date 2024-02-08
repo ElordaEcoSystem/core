@@ -1,12 +1,9 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import Image from "next/image";
 import React from "react";
-
+import { DIRECTORS_DATA } from "../needed/constans";
 export default function About() {
   return (
     <>
-      <Header />
       <section className="bg-prime">
         <div className="container py-12 flex flex-col gap-4 ">
           <h2 className="text-3xl font-bold text-white">Об организации</h2>
@@ -45,7 +42,7 @@ export default function About() {
       <section className="py-8">
         <div className="container">
           <h2 className="text-3xl font-bold ">Структура</h2>
-          {directorsArr.map(
+          {DIRECTORS_DATA.map(
             ({
               photoName,
               fullName,
@@ -68,42 +65,9 @@ export default function About() {
           )}
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }
-
-const directorsArr = [
-  {
-    photoName: "man.jpg",
-    fullName: "Гарифуллин Бахтияр Салаватович",
-    positionOfCompany: "Заместитель Генерального директора",
-    internalNumber: 102,
-    reception: { day: "Вторник", time: { start: "15:00", end: "17:00" } },
-  },
-  {
-    photoName: "man.jpg",
-    fullName: "Маркабаев Марат Онайбаевич",
-    positionOfCompany: "Заместитель Генерального директора",
-    internalNumber: 103,
-    reception: { day: "", time: { start: "15:00", end: "17:00" } },
-  },
-  {
-    photoName: "man.jpg",
-    fullName: "Маркабаев Марат Онайбаевич",
-    positionOfCompany: "Заместитель Генерального директора",
-    internalNumber: 103,
-    reception: { day: "", time: { start: "15:00", end: "17:00" } },
-  },
-  {
-    photoName: "man.jpg",
-    fullName: "Маркабаев Марат Онайбаевич",
-    positionOfCompany: "Заместитель Генерального директора",
-    internalNumber: 103,
-    reception: { day: "", time: { start: "15:00", end: "17:00" } },
-  },
-];
 
 const DirectorCard = ({
   photoName,

@@ -6,7 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const News = () => {
-  const newsArr = NEWS_DATA.slice(-4);
+  const pathToThumbnail = "/image/posts";
+  const newsArr = NEWS_DATA.slice(0, 4);
+  console.log(newsArr);
   return (
     <section id="news" className="py-10 container ">
       <div className="flex justify-between items-center">
@@ -22,15 +24,13 @@ export const News = () => {
         </button>
       </div>
       <div className="grid grid-cols-2 gap-5 mt-14">
-        <div className="h-[584px] flex flex-col">
+        <div className="h-[556px] flex flex-col">
           <div className="h-full bg-slate-400">
             <Image
               width={0}
               height={0}
               sizes="100vw"
-              src={`/image/DirectorsImage/${
-                newsArr[newsArr.length - 1].imageName
-              }`}
+              src={`${pathToThumbnail}/${newsArr[0].title}/${newsArr[0].thumbnail}`}
               className="h-full w-full object-cover"
             />
           </div>
@@ -44,13 +44,14 @@ export const News = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between gap-[19px]">
-          {newsArr.slice(0, 3).map(({ id, title, date, imageName }) => (
+        <div className="flex flex-col justify-between gap-[5px]">
+          {newsArr.slice(1, 4).map(({ id, title, date, thumbnail }) => (
             <LittleNews
               key={id}
               title={title}
               date={date}
-              imageName={imageName}
+              thumbnail={thumbnail}
+              pathToThumbnail={pathToThumbnail}
             />
           ))}
         </div>
@@ -59,15 +60,15 @@ export const News = () => {
   );
 };
 
-const LittleNews = ({ title, date, imageName }) => {
+const LittleNews = ({ thumbnail, title, date, pathToThumbnail }) => {
   return (
     <div className="w-full grid grid-cols-[182px_auto] h-full">
       <Image
+        sizes="100vw"
+        src={`${pathToThumbnail}/${title}/${thumbnail}`}
         width={0}
         height={0}
-        sizes="100vw"
-        src={`/image/DirectorsImage/${imageName}`}
-        className="h-full w-full object-cover"
+        className="h-[182px]  w-52 object-cover justify-center"
       />
       {/* <div className="bg-gray-300 "></div> */}
       <div className="bg-prime w-full p-6 flex flex-col justify-center">

@@ -47,7 +47,7 @@ export const Footer = () => {
               <div className="flex flex-col gap-1">
                 {infoArr.map((item) => {
                   return (
-                    <InfoItem text={item.text}>
+                    <InfoItem key={item.icon} text={item.text}>
                       <item.icon className="h-5 w-5" />
                     </InfoItem>
                   );
