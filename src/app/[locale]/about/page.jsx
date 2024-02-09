@@ -1,6 +1,6 @@
+import { DIRECTORS_DATA } from "@/app/needed/constans";
 import Image from "next/image";
 import React from "react";
-import { DIRECTORS_DATA } from "../needed/constans";
 export default function About() {
   return (
     <>

@@ -1,6 +1,9 @@
-import { REQUEST_PTO } from "../needed/constans";
+// import { REQUEST_PTO } from "@/app/needed/constans";
 
+import { useTranslations } from "next-intl";
 export default function RequestPTO() {
+  const t = useTranslations("Request_PTO");
+  console.log(t("Request"));
   return (
     <div className="container py-10">
       <h2 className="text-3xl font-bold text-prime">
@@ -9,7 +12,7 @@ export default function RequestPTO() {
       </h2>
 
       <div className="mt-4"></div>
-      {REQUEST_PTO.map((item, i) => {
+      {/* {t("Request").map((item, i) => {
         return (
           <>
             <p>
@@ -22,7 +25,9 @@ export default function RequestPTO() {
             </p>
           </>
         );
-      })}
+      })} */}
     </div>
   );
 }
+
+//Request_PTO
